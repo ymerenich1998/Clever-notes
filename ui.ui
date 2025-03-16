@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Розумні замітки</string>
+  </property>
+  <widget class="QWidget" name="notes_win">
+   <widget class="QTextEdit" name="field_text">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>511</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Введіть замітку...</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>10</y>
+      <width>265</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="col_1">
+     <item>
+      <widget class="QLabel" name="list_notes_label">
+       <property name="text">
+        <string>Список заміток</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QListWidget" name="list_notes"/>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="row_1">
+       <item>
+        <widget class="QPushButton" name="button_note_create">
+         <property name="text">
+          <string>Створити замітку</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="button_note_del">
+         <property name="text">
+          <string>Видалити замітку</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QPushButton" name="button_note_save">
+       <property name="text">
+        <string>Зберегти замітку</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="list_tags_label">
+       <property name="text">
+        <string>Список тегів</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QListWidget" name="list_tags"/>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="field_tag">
+       <property name="cursor">
+        <cursorShape>ArrowCursor</cursorShape>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="placeholderText">
+        <string>Введіть тег...</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="row_2">
+       <item>
+        <widget class="QPushButton" name="button_tag_add">
+         <property name="text">
+          <string>Додати до замітки</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="button_tag_del">
+         <property name="text">
+          <string>Відкріпити від замітки</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QPushButton" name="button_tag_search">
+       <property name="text">
+        <string>Шукати замітку по тегу</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
