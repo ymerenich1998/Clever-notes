@@ -16,6 +16,7 @@ class Widget(QMainWindow):
         self.ui.button_note_del.clicked.connect(self.del_note)
         self.ui.button_tag_add.clicked.connect(self.add_tag)
         self.ui.button_tag_del.clicked.connect(self.del_tag)
+        self.ui.button_tag_search.clicked.connect(self.search_tag)
 
     def add_note(self):
         note_name, ok = QInputDialog.getText( self, "Додати замітку", "Назва замітки:")
@@ -83,6 +84,17 @@ class Widget(QMainWindow):
                 json.dump(notes, file, ensure_ascii=False)
         else:
             print("Оберіть замітку для видалення тегу")
+    
+    def search_tag(self):
+        if self.ui.field_tag.text() != "":
+            tag = self.ui.field_tag.text()
+            self.ui.list_notes.clear()
+            for key in notes.keys():
+                if tag in notes[key]["теги"]:
+                    self.ui.list_notes.addItem(key)
+        else:
+            print("Введіть тег для пошуку")
+        self.ui.field_tag.clear()
     
       
 app = QApplication([])
