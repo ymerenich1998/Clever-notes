@@ -86,16 +86,15 @@ class Widget(QMainWindow):
             print("Оберіть замітку для видалення тегу")
     
     def search_tag(self):
-        if self.ui.field_tag.text() != "":
-            tag = self.ui.field_tag.text()
-            self.ui.list_notes.clear()
+        tag = self.ui.field_tag.text()
+        self.ui.list_notes.clear()
+        if tag != "":
             for key in notes.keys():
                 if tag in notes[key]["теги"]:
                     self.ui.list_notes.addItem(key)
         else:
-            print("Введіть тег для пошуку")
+            self.ui.list_notes.addItems(notes.keys())
         self.ui.field_tag.clear()
-    
       
 app = QApplication([])
 ex = Widget()
